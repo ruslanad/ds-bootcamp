@@ -8,7 +8,7 @@ dir_path = os.path.dirname(os.path.realpath(__file__))
 
 def create_app():
     app = Flask(__name__)
-    with open(os.path.join(dir_path, 'yamls/ruslana_model.yaml'), 'r') as f:
+    with open(os.path.join(dir_path, 'yamls', 'ruslana_model.yaml'), 'r') as f:
         model_config = yaml.load(f, Loader=yaml.SafeLoader)
 
     @app.route("/ruslana_model/<submodel>/<x_1>")
